@@ -1,0 +1,21 @@
+{
+  "name": "GradKartGo",
+  "short_name": "GradKartGo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "description": "Buy and sell second-hand items with verified students on GradKartGo.",
+  "icons": [
+    {
+      "src": "/gradkart-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/gradkart-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 
