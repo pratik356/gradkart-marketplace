@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 // Security middleware
 app.use(helmet({
@@ -82,15 +82,14 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 GradKart Server running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`📱 Health check: http://localhost:${PORT}/api/health`);
-  
+  console.log(`📱 Health check: http://localhost:${port}/api/health`);
   if (process.env.NODE_ENV === 'production') {
     console.log(`🎯 Production mode: Serving Next.js build`);
   } else {
-    console.log(`🔧 Development mode: Start Next.js with "cd client && npm run dev"`);
+    console.log(`🔧 Development mode: Start Next.js with \"cd client && npm run dev\"`);
   }
 });
 
